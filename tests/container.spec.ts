@@ -1,6 +1,5 @@
-import {suite, test} from "mocha-typescript";
 import {Container} from "../di/container";
-import {expect} from "chai";
+import {expect, suite, test} from "@hypertype/tools/test/index.js";
 
 @suite
 export class ContainerSpec {

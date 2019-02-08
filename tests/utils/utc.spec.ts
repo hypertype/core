@@ -1,6 +1,5 @@
-import {suite, test} from "mocha-typescript";
 import {utc} from "../../utils/utc";
-import {expect} from "chai";
+import {expect, suite, test} from "@hypertype/tools/test/index.js";
 
 @suite
 export class UtcSpec {

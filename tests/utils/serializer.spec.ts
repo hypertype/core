@@ -1,8 +1,5 @@
-import {expect} from 'chai';
-import {suite, test} from 'mocha-typescript';
 import {Serializer} from "../../utils/serializer";
-
-
+import {expect, suite, test} from "@hypertype/tools/test/index.js";
 
 @suite()
 export class SerializerSpec {
