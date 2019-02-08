@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@hypertype/tools@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@hypertype/tools/-/tools-1.0.6.tgz#261c133f69d835c3965c34b9cee26c6ec6398e73"
+  integrity sha512-9bkou3GuBwhiNKPOd1SLWPD51XqZNYNPeB44yEVyrrwpZXQ3PNelG7GEuyT15ShGfpp/1w11nQbTORm/80eu8A==
+  dependencies:
+    "@types/chai" "^4.1.7"
+    chai "^4.2.0"
+    mocha-typescript "^1.1.17"
+    ts-jest "^23.10.5"
+
 "@types/chai@^4.1.7":
   version "4.1.7"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.1.7.tgz#1b8e33b61a8c09cbe1f85133071baa0dbf9fa71a"

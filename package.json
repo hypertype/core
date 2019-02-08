@@ -24,6 +24,15 @@
   "directories": {
     "test": "tests"
   },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tests/tsconfig.json"
+      }
+    }
+  },
   "bundleDependencies": [
     "luxon",
     "pako",
@@ -34,19 +43,7 @@
     "pako": "^1.0.8",
     "rxjs": "^6.4.0"
   },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "tests/tsconfig.json"
-      }
-    }
-  },
   "devDependencies": {
-    "@types/chai": "^4.1.7",
-    "chai": "^4.2.0",
-    "mocha-typescript": "^1.1.17",
-    "ts-jest": "^23.10.5"
+    "@hypertype/tools": "1.0.6"
   }
 }
