@@ -1,0 +1,14 @@
+{
+  "extends": "../../tools/tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist/esm",
+    "declarationDir": "./dist/typings"
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "tests"
+  ]
+}

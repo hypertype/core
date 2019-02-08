@@ -18,5 +18,8 @@
   "homepage": "https://github.com/hypertype/core#readme",
   "directories": {
     "test": "tests"
+  },
+  "dependencies": {
+    "rxjs": "^6.4.0"
   }
 }
