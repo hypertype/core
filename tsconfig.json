@@ -3,12 +3,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "./dist/esm",
-    "declarationDir": "./dist/typings"
+    "declarationDir": "./dist/typings",
+    "noEmitOnError": true,
+    "composite": true
   },
   "include": [
     "**/*.ts"
   ],
   "exclude": [
-    "tests"
+    "tests",
+    "dist"
   ]
 }
