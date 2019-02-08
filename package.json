@@ -1,6 +1,6 @@
 {
   "name": "@hypertype/core",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.ts",
   "scripts": {
@@ -11,7 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/hypertype/core.git"
   },
-  "files": ["dist", "tsconfig.json"],
+  "files": [
+    "dist",
+    "tsconfig.json"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
