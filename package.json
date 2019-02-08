@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hypertype/core/issues"
   },
-  "homepage": "https://github.com/hypertype/core#readme"
+  "homepage": "https://github.com/hypertype/core#readme",
+  "directories": {
+    "test": "tests"
+  }
 }
