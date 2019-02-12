@@ -20,3 +20,5 @@ export function utc(d: (Date | number | string) = undefined): DateTime {
 export function utcToday() {
   return utc().startOf('day');
 }
+
+export {DateTime}
