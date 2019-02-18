@@ -31,3 +31,4 @@ export * from "rxjs/internal/operators/finalize";
 export * from "rxjs/internal/operators/first";
 export * from "rxjs/internal/operators/delay";
 export * from "rxjs/internal/observable/throwError";
+export * from "rxjs/internal/operators/groupBy";
