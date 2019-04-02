@@ -5,6 +5,9 @@ export type CommonProvider = ValueProvider & ClassProvider & FactoryProvider;
 
 
 export class Container {
+
+    public static StaticDepsMap: Map<any, { deps: any[], multiple: boolean }> = new Map();
+
     constructor() {
     }
 
@@ -22,6 +25,12 @@ export class Container {
         return this.resolve(existing as CommonProvider);
     }
 
+    public static withProviders(...providers: Provider[]) {
+        const result = new Container();
+        result.provide(providers);
+        return result;
+    }
+
     public provide(providers: Provider[] | Container) {
         if (providers instanceof Container) {
             this.store.register(providers.store);
@@ -36,6 +45,12 @@ export class Container {
         if (!provider.useClass) {
             provider.useClass = provider.provide;
         }
+        if (Container.StaticDepsMap.has(provider.useClass)) {
+            const {deps, multiple} = Container.StaticDepsMap.get(provider.useClass);
+            provider.deps = deps;
+            provider.multiple = multiple;
+        }
+
         if (provider.useClass) {
             if (!provider.deps) {
 // console.warn('no deps in provider', provider.provide, provider.useClass);

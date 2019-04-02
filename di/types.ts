@@ -1,4 +1,8 @@
-export type Provider = ValueProvider | ClassProvider | FactoryProvider
+export type Provider = ValueProvider | ClassProvider | FactoryProvider | ProvideProvider | any;
+
+export interface ProvideProvider {
+    provide: any;
+}
 
 export interface ValueProvider {
     provide: any;

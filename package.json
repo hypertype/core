@@ -2,8 +2,8 @@
   "name": "@hypertype/core",
   "version": "1.2.6",
   "description": "",
-  "module": "dist/esm/index.js",
-  "main": "dist/bundle/index.js",
+  "main": "dist/esm/index.js",
+  "bundle": "dist/bundle/index.js",
   "typings": "dist/typings/index.d.ts",
   "scripts": {
     "bundle": "hypertype",
@@ -38,16 +38,17 @@
     }
   },
   "bundleDependencies": [
-    "luxon",
     "pako",
     "rxjs"
   ],
   "dependencies": {
-    "luxon": "^1.11.1",
-    "pako": "^1.0.8",
+    "jsondiffpatch": "^0.3.11",
+    "luxon": "^1.11.4",
+    "pako": "^1.0.10",
     "rxjs": "^6.4.0"
   },
   "devDependencies": {
-    "@hypertype/tools": "^1.0.6"
+    "@hypertype/tools": "^1.0.24",
+    "@types/luxon": "^1.11.1"
   }
 }

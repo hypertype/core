@@ -2,6 +2,8 @@ import {Provider} from "./types";
 
 
 export class Store {
+
+
     private providers: Provider[] = [];
 
     constructor(global = false) {
@@ -15,6 +17,8 @@ export class Store {
         if (provider instanceof Store) {
             provider.providers.forEach(p => this.register(p));
         } else {
+            if (!provider.provide)
+                provider = {provide: provider};
             this.providers.push(provider);
             return provider;
         }
