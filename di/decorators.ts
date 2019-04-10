@@ -13,7 +13,7 @@ export const Inject: (token) => ParameterDecorator = (injectionToken) => {
 }
 
 
-Object.assign((global||window||self)['Reflect'], {
+Object.assign(Reflect, {
     decorate: (decoratorsAndDeps: any[], target, key, desc) => {
         if (key) {
             decoratorsAndDeps[0](target, key, desc);
