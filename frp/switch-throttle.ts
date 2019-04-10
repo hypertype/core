@@ -1,6 +1,16 @@
-import {async, ReplaySubject, shareReplay, switchMap, throttleTime} from "./index";
-import {debounceTime, first, last, startWith, take} from "rxjs/operators";
-import {of} from "rxjs";
+import {
+    async,
+    debounceTime,
+    first,
+    last,
+    of,
+    ReplaySubject,
+    shareReplay,
+    startWith,
+    switchMap,
+    take,
+    throttleTime
+} from "./operators";
 
 export function switchThrottle(time: number) {
     return (target, key, decorator) => {
@@ -44,6 +54,7 @@ export function switchDebounce(time: number) {
         })
     }
 }
+
 /*
 export function serializeAndDebounce() {
     return (target, key, decorator) => {

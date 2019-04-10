@@ -27,6 +27,10 @@ export class Store {
     find(type) {
         return this.providers.filter(p => p.provide == type).pop();
     }
+
+    public getProviders() {
+        return this.providers;
+    }
 }
 
 export const GlobalStore = new Store(true);

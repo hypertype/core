@@ -13,6 +13,21 @@ export class Container {
 
     private store = new Store();
 
+
+    public getProviders() {
+        return this.store.getProviders()
+            .map(provider => {
+                if (!provider.provide)
+                    provider = {provide: provider};
+                if (Container.StaticDepsMap.has(provider.useClass || provider.provide)) {
+                    const {deps, multiple} = Container.StaticDepsMap.get(provider.useClass || provider.provide);
+                    provider.deps = deps;
+                    provider.multi = multiple;
+                }
+                return provider;
+            });
+    }
+
     public get<T>(target): T {
         if (target === Container)
             return this as unknown as T;
