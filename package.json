@@ -43,13 +43,14 @@
   ],
   "dependencies": {
     "jsondiffpatch": "^0.3.11",
-    "luxon": "^1.12.0",
+    "luxon": "^1.12.1",
     "pako": "^1.0.10",
     "rxjs": "^6.4.0"
   },
   "devDependencies": {
-    "@hypertype/tools": "^1.0.26",
-    "@types/luxon": "^1.12.0"
+    "@hypertype/tools": "^2.0.1",
+    "@types/luxon": "^1.12.0",
+    "@types/node": "^11.13.2"
   },
   "hypertype": {
     "lib": {
