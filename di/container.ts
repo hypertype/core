@@ -19,8 +19,10 @@ export class Container {
             .map(provider => {
                 if (!provider.provide)
                     provider = {provide: provider};
-                if (Container.StaticDepsMap.has(provider.useClass || provider.provide)) {
-                    const {deps, multiple} = Container.StaticDepsMap.get(provider.useClass || provider.provide);
+                if (!provider.useClass && !provider.useValue && !provider.useFactory)
+                    provider.useClass = provider.provide;
+                if (Container.StaticDepsMap.has(provider.useClass)) {
+                    const {deps, multiple} = Container.StaticDepsMap.get(provider.useClass);
                     provider.deps = deps;
                     provider.multi = multiple;
                 }
