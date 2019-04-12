@@ -24,6 +24,7 @@ export * from "rxjs/internal/operators/throttleTime";
 export * from "rxjs/internal/operators/withLatestFrom";
 export * from "rxjs/internal/observable/from";
 export * from "rxjs/internal/operators/take";
+export * from "rxjs/internal/operators/takeUntil";
 export * from "rxjs/internal/observable/fromEvent";
 export * from "rxjs/internal/scheduler/animationFrame";
 export * from "rxjs/internal/scheduler/async";
