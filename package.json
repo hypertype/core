@@ -45,6 +45,7 @@
     "jsondiffpatch": "^0.3.11",
     "luxon": "^1.12.1",
     "pako": "^1.0.10",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "^6.4.0"
   },
   "devDependencies": {

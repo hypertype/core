@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import {Container} from "./container";
 
 export function Injectable(multiple: boolean = false): (target) => void {
