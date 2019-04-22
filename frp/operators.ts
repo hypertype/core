@@ -6,6 +6,7 @@ export * from "rxjs/internal/observable/interval";
 export * from "rxjs/internal/observable/combineLatest";
 export * from "rxjs/internal/observable/merge";
 export * from "rxjs/internal/operators/filter";
+export * from "rxjs/internal/operators/skip";
 export * from "rxjs/internal/operators/skipWhile";
 export * from "rxjs/internal/operators/skipUntil";
 export * from "rxjs/internal/operators/map";
