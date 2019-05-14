@@ -6,6 +6,8 @@ export class Serializer {
     static deserLastData = null;
 
     static serialize(data: any) {
+        return data;
+        return JSON.stringify(data);
         if (!this.serLastData) {
             this.serLastData = data;
             return JSON.stringify(data);
@@ -18,6 +20,8 @@ export class Serializer {
     }
 
     static deserialize(bytes: any) {
+        return bytes;
+        return JSON.parse(bytes);
         if (!this.deserLastData) {
             return this.deserLastData = JSON.parse(bytes);
         }
