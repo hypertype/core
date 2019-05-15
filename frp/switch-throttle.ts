@@ -2,17 +2,14 @@ import {
     async,
     debounceTime,
     first,
-    last,
+    mergeMap,
     of,
     ReplaySubject,
     shareReplay,
     startWith,
     switchMap,
-    take,
-    throttleTime,
-    tap
+    throttleTime
 } from "./operators";
-import {mergeMap} from "rxjs/operators";
 
 export function switchThrottle(time: number) {
     return (target, key, decorator) => {
