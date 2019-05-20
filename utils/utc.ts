@@ -8,10 +8,10 @@ export function utc(d: (Date | number | string) = undefined): DateTime {
         return DateTime.fromISO(d).toUTC();
     }
     if (typeof d === "number") {
-        return DateTime.utc(d);
+        return DateTime.fromMillis(d, {zone: 'utc'});
     }
     if (d instanceof Date) {
-        return DateTime.utc(+d);
+        return DateTime.fromJSDate(d, {zone: 'utc'});
     }
     return DateTime.utc();
 }
