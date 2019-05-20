@@ -29,11 +29,20 @@ declare global {
         mapBy(selector: (t: T) => (string | number)): any;
 
         orderBy(selector: (t: T) => (string | number), descending?): Array<T>;
+
+        groupBy<K>(selector: (t: T) => K, descending?): Map<K, Array<T>>;
     }
 }
 
-Array.prototype.orderBy = function <T>(selector: (t: T) => (number), descending = false) {
-    return [...this].sort((a, b) => (selector(a) - selector(b)) * (descending ? -1 : 1));
+Array.prototype.groupBy = function <T, K>(selector: (t: T) => K, descending?) {
+    return this.reduce((result: Map<K, Array<T>>, item: T) => {
+        const key = selector(item);
+        if (result.has(key))
+            result.get(key).push(item);
+        else
+            result.set(key, [item]);
+        return result;
+    }, new Map());
 };
 Array.prototype.toMap = function (keySelector, valSelector) {
     return this.reduce((res, cur) => {
