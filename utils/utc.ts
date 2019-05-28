@@ -1,7 +1,7 @@
 /**
  * Created by xamidylin on 2017-01-23.
  */
-import {DateTime, Duration} from 'luxon';
+import {DateTime, Duration} from './luxon';
 
 export function utc(d: (Date | number | string) = undefined): DateTime {
     if (typeof d === "string") {
@@ -21,4 +21,3 @@ export function utcToday() {
     return utc().startOf('day');
 }
 
-export {DateTime, Duration};
