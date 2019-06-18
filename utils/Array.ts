@@ -99,7 +99,7 @@ Array.prototype.removeAll = function (test: (item: any) => boolean) {
     }
     var left = 0;
     var right = this.length - 1;
-    while (left < right) {
+    while (left <= right) {
         if (test(this[left])) {
             var temp = this[right];
             this[right] = left;
