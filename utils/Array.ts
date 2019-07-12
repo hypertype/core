@@ -1,3 +1,5 @@
+import {Fn} from "./Fn";
+
 export {};
 
 declare global {
@@ -49,6 +51,11 @@ Array.prototype.toMap = function (keySelector, valSelector) {
         res[keySelector(cur)] = valSelector(cur);
         return res;
     }, {});
+};
+
+
+Array.prototype.orderBy = function <T>(selector: (t: T) => (string | number) = Fn.I as any, descending = false) {
+    return [...this].sort((a,b) => ((selector(a) > selector(b)) ? 1 : -1) * (descending ? -1 : 1));
 };
 
 Array.prototype.mapBy = function (selector) {
