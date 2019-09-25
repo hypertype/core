@@ -17,6 +17,7 @@ export * from "rxjs/internal/operators/tap";
 export * from "rxjs/internal/observable/never";
 export * from "rxjs/internal/observable/of";
 export * from "rxjs/internal/operators/bufferTime";
+export * from "rxjs/internal/operators/concatMap";
 export * from "rxjs/internal/operators/debounceTime";
 export * from "rxjs/internal/operators/mergeMap";
 export * from "rxjs/internal/operators/pairwise";
