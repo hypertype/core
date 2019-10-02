@@ -35,6 +35,19 @@ export const Fn = {
     arrayEqual: (arr1, arr2) => {
         if (arr1.length != arr2.length) return false;
         return arr1.every((a, i) => a == arr2[i]);
+    },
+    cache() {
+        return (target, key, descr) => {
+            console.log(target, key, descr);
+            const existed = descr.value;
+            const cacheSymbol = Symbol("cache");
+            descr.value = function(id){
+                if (!this[cacheSymbol]) this[cacheSymbol] = {};
+                return this[cacheSymbol][id] ||
+                    (this[cacheSymbol][id] = existed.call(this, id))
+            };
+            return descr;
+        }
     }
 
 };
