@@ -1,3 +1,5 @@
+import * as crc32 from "crc-32";
+
 export const Fn = {
     I<T>(x: T): T {
         return x || null;
@@ -47,6 +49,9 @@ export const Fn = {
             };
             return descr;
         }
+    },
+    crc32(value){
+        return crc32.str(JSON.stringify(value));
     }
 
 };
