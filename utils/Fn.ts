@@ -38,7 +38,6 @@ export const Fn = {
     },
     cache() {
         return (target, key, descr) => {
-            console.log(target, key, descr);
             const existed = descr.value;
             const cacheSymbol = Symbol("cache");
             descr.value = function(id){
